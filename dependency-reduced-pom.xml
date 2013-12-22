@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.aksw.geolift.nlp</groupId>
+  <artifactId>GeoLift</artifactId>
+  <version>1.0+SNAPSHOT1387263210</version>
+  <profiles>
+    <profile>
+      <id>debpackage</id>
+      <build>
+        <finalName>geolift</finalName>
+        <plugins>
+          <plugin>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>2.1</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>shade</goal>
+                </goals>
+                <configuration>
+                  <transformers>
+                    <transformer>
+                      <mainClass>org.aksw.geolift.workflow.GeoLift</mainClass>
+                    </transformer>
+                  </transformers>
+                </configuration>
+              </execution>
+            </executions>
+            <configuration />
+          </plugin>
+          <plugin>
+            <groupId>org.vafer</groupId>
+            <artifactId>jdeb</artifactId>
+            <version>1.0.1</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>jdeb</goal>
+                </goals>
+                <configuration>
+                  <deb>/home/dcherix/workspace-geolift/GeoLift/target/geolift-1.0+SNAPSHOT1387263210.deb</deb>
+                  <controlDir>/home/dcherix/workspace-geolift/GeoLift/debian</controlDir>
+                  <dataSet>
+                    <data>
+                      <src>/home/dcherix/workspace-geolift/GeoLift/target/geolift.jar</src>
+                      <type>file</type>
+                      <mapper>
+                        <type>perm</type>
+                        <prefix>/etc/share/java/geolift</prefix>
+                      </mapper>
+                    </data>
+                    <data>
+                      <src>/home/dcherix/workspace-geolift/GeoLift/debian/geolift</src>
+                      <type>file</type>
+                      <mapper>
+                        <type>perm</type>
+                        <filemode>777</filemode>
+                        <prefix>/usr/bin</prefix>
+                      </mapper>
+                    </data>
+                  </dataSet>
+                  <changesIn>/home/dcherix/workspace-geolift/GeoLift/debian/CHANGES.txt</changesIn>
+                  <changesSave>/home/dcherix/workspace-geolift/GeoLift/debian/CHANGES.txt</changesSave>
+                  <changesOut>/home/dcherix/workspace-geolift/GeoLift/target/geolift.changes</changesOut>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+  <repositories>
+    <repository>
+      <releases />
+      <id>apache-repo-releases</id>
+      <url>https://repository.apache.org/content/repositories/releases/</url>
+    </repository>
+    <repository>
+      <id>maven.aksw.org/internal</id>
+      <name>University Leipzig, AKSW Maven2 Internal Repository</name>
+      <url>http://maven.aksw.org/repository/internal/</url>
+    </repository>
+    <repository>
+      <id>maven.aksw.org/snapshots</id>
+      <name>University Leipzig, AKSW Maven2 Snapshot Repository</name>
+      <url>http://maven.aksw.org/repository/snapshots/</url>
+    </repository>
+  </repositories>
+</project>
+
