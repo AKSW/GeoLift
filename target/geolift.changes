@@ -1,0 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Tue, 17 Dec 2013 07:53:52 +0100
+Source: geolift
+Binary: geolift
+Architecture: all
+Version: 1.0+SNAPSHOT1387263210
+Distribution: development
+Urgency: low
+Maintainer: Mohamed Sherif <sherif@informatik.uni-leipzig.de>
+Changed-By: Mohamed Sherif <sherif@informatik.uni-leipzig.de>
+Description: Spatial mapping framework for enriching RDF datasets with Geo-spatial information.
+ GeoLift is a spatial mapping component aims to enrich RDF datasets with geo-spatial information. To achieve this goal, GeoLit relies on three atomic modules based on dereferencing, linking and NLP. GeoLift implemented in Java as an open-source project.
+Changes: geolift (1.0+SNAPSHOT1387263210) development; urgency=low
+Checksums-Sha1:
+ 9c63baf6100e5f9f67b02180dff3d3abef4c5784 23557620 geolift-1.0+SNAPSHOT1387263210.deb
+Checksums-Sha256:
+ 8db11b0362729710ab61966149d0c5b175c9d500dcdb7dc9eaad0111d9fced47 23557620 geolift-1.0+SNAPSHOT1387263210.deb
+Files:
+ 3c09768a8e612b24d86953b56ed6ce76 23557620 misc optional geolift-1.0+SNAPSHOT1387263210.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJSr/VTAAoJEMRNFMWYlcHKt9kIAJCC1lfQLlB3wvchFpeEt2gT
+Kzs4UwcdqqOon8XPFATlCTJKrNCW58O/ihy6jWXIw/sycK9bTN5i84UZiU32nLZp
+bOXna7KpTWAzRGKRVIyY7PA5IveuhIoFxTRG/ZwigHSTAEKCX4rWxIbJ7H8lZeQ6
+as4a2urFABRm52z82fjg0U+4qJ88Ifg/NWTYylNn++HoWB7ssLWH/BpoIGyekze0
+ML8XHfxM9vN63RwvTb+X1CGgsTzaobldW2viscwUrzbzqlrHVm7oKByLIpQqZ7oZ
+go3PZBQUDBVKXrgsRf/NS7LDOGIrz2IkgaxyagHo73Sf3xtLGAJf0Q3QDif5kSo=
+=4CVH
+-----END PGP SIGNATURE-----
